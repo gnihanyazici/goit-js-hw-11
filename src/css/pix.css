@@ -1,0 +1,122 @@
+/* Genel Stil Sıfırlama ve Font */
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0; /* Hafif arka plan */
+    margin: 0;
+}
+
+/* 1. Arama Formu Düzeni */
+.search-form {
+    /* Maketteki gibi ortalanmış dikey düzen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-top: 20px;
+}
+
+.search-form input[type="text"] {
+    /* Makete uygun genişlik ve stil */
+    padding: 10px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    width: 272px; 
+    font-size: 16px;
+    margin-right: 8px; /* Buton ile arasında boşluk */
+    /* Kenarlık rengi ve gölge maketteki gibi sade tutuldu */
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: #4E75FF; /* Mavi Buton Rengi */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.search-form button:hover {
+    background-color: #6C8CFF;
+}
+
+/* 2. Galeri Düzeni (Maketteki 3 Sütunlu Izgara) */
+.gallery {
+    display: grid;
+    /* 3 eşit sütunlu ızgara */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px; /* Kartlar arasındaki boşluk */
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Galeriyi ortala */
+    max-width: 1200px; /* Opsiyonel: Belli bir maksimum genişlik */
+}
+
+/* 3. Fotoğraf Kartı Stili */
+.photo-card {
+    background-color: white;
+    border: 1px solid #EAEAEA;
+    border-radius: 0; /* Makette köşeler keskin görünüyor */
+    overflow: hidden;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    transition: transform 0.2s;
+}
+
+.photo-card:hover {
+    transform: none; /* Hafif bir etki kaldırıldı, maket daha statik */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.photo-card a {
+    display: block;
+    text-decoration: none;
+}
+
+.photo-card img {
+    width: 100%;
+    /* Maketteki görsellerin yüksekliği hemen hemen aynı oranda görünüyor */
+    height: 200px; 
+    object-fit: cover; 
+}
+
+/* 4. Bilgi Kutusu ve İstatistikler Stili */
+.info {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0; /* İç dolgu */
+    border-top: 1px solid #EAEAEA; /* İstatistikleri görselden ayıran çizgi */
+}
+
+.info-item {
+    text-align: center;
+    /* Maketteki gibi küçük ve düzgün font */
+    font-size: 12px; 
+    color: #444; 
+    line-height: 1.4;
+}
+
+.info-item b {
+    display: block;
+    font-size: 14px; /* Başlıklar daha belirgin */
+    font-weight: 700;
+    color: #333;
+}
+
+/* 5. Yükleyici Stilleri */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4E75FF; /* Mavi yükleyici */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
