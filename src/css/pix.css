@@ -116,7 +116,13 @@ body {
     display: none;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.loader-text {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.loader p {
+  font-size: 16px;
+  color: #333;
 }
